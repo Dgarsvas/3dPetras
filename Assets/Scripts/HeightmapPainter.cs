@@ -29,7 +29,6 @@ public class HeightmapPainter : MonoBehaviour
     {
        colors = new Color[vertices.Length];
 
-
         for(int i = 0; i < vertices.Length; i++)
         {
             float height = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices[i].y);
@@ -41,7 +40,7 @@ public class HeightmapPainter : MonoBehaviour
 
     void OnGUI()
     {
-        if (GUI.Button(new Rect(10, 10, 150, 100), "Regenerate"))
+        if (GUI.Button(new Rect(10, 10, 150, 50), "Regenerate"))
         {
             RefreshColors();
         }
