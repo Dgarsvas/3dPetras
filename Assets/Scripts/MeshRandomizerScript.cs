@@ -57,11 +57,4 @@ public class MeshRandomizerScript : MonoBehaviour
     {
         return Mathf.PerlinNoise((x+xOffset)*frequency, (z+zOffset)*frequency) * amplitude;
     }
-    void OnGUI()
-    {
-        if (GUI.Button(new Rect(500, 10, 150, 50), "Recreate mesh"))
-        {
-            RefreshMesh();
-        }
-    }
 }
