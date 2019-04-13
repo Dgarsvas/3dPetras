@@ -21,7 +21,9 @@ public class ObjectPlacerScript : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             Vector3 spawnPoint = hit.point;
+
             var clone = Instantiate(prefab, spawnPoint, Quaternion.identity);
+            clone.transform.position += new Vector3(0,clone.GetComponent<MeshFilter>().mesh.bounds.size.y/2,0);
         }
     }
 }
