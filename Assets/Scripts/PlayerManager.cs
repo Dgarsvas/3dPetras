@@ -16,9 +16,8 @@ public class PlayerManager : MonoBehaviour
 
     public bool isEnemy = false;
 
-    public int chosenUnit;
+    public int chosenUnit = -1;
 
-    private bool canPlace = false;
     private bool isMoving = false;
 
     public GameObject[] units;
@@ -52,19 +51,14 @@ public class PlayerManager : MonoBehaviour
 
     private void ButtonPressed()
     {
-
-        if (canPlace)
+        if(isMoving)
         {
-            TryPlacing();
-        }
-        else if(isMoving)
-        {
-
             TryMoving();
         }
-        else
+        else if (!TrySelecting())
         {
-            TrySelecting();
+            if(chosenUnit != -1)
+                TryPlacing(); 
         }
     }
 
@@ -98,7 +92,7 @@ public class PlayerManager : MonoBehaviour
         sky.SetActive(false);
     }
 
-    private void TrySelecting()
+    private bool TrySelecting()
     {
         Debug.Log("Trying to select unit");
         RaycastHit hit;
@@ -109,8 +103,10 @@ public class PlayerManager : MonoBehaviour
             if(hit.transform.gameObject.GetComponent<UnitIdentifier>() != null)
             {
                 SelectUnit(hit.transform);
+                return true;
             }
         }
+        return false;
     }
 
     private void SelectUnit(Transform transform)
@@ -136,7 +132,6 @@ public class PlayerManager : MonoBehaviour
         }
 
         sky.SetActive(false);
-        canPlace = false;
     }
 
     public Transform SpawnUnit(Vector3 pos)
@@ -155,7 +150,11 @@ public class PlayerManager : MonoBehaviour
     {
         var clone = Instantiate(go, pos, Quaternion.identity);
         clone.transform.position += new Vector3(0, clone.GetComponent<MeshFilter>().mesh.bounds.size.y / 2, 0); //placing it on the ground
-        clone.GetComponent<Renderer>().material.SetColor("_color", color);
+        Material[] mats = clone.GetComponent<Renderer>().materials;
+        for(int i = 0; i < mats.Length; i++)
+        {
+            mats[i].SetColor("_color", color);
+        }
         clone.tag = tag;
 
         return clone.transform;
@@ -173,8 +172,6 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("Dropdown changed");
         chosenUnit = dropdown.value;
-
-        canPlace = true;
 
         if (units[chosenUnit].GetComponent<UnitIdentifier>().isAir)
         {
