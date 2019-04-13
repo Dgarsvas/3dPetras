@@ -95,6 +95,7 @@ public class PlayerManager : MonoBehaviour
     public void ClearUnits()
     {
         onDeleteAllUnits?.Invoke();
+        sky.SetActive(false);
     }
 
     private void TrySelecting()

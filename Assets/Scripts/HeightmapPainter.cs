@@ -29,6 +29,8 @@ public class HeightmapPainter : MonoBehaviour
     {
         this.mesh = mesh;
         this.vertices = vertices;
+
+        RefreshColors();
     }
 
     private void AssignColors()
