@@ -47,6 +47,11 @@ public class MeshRandomizerScript : MonoBehaviour
             vertices[i] = new Vector3(x,y,z);
         }
         mesh.vertices = vertices;
+
+        if(GetComponent<HeightmapPainter>() != null)
+        {
+            GetComponent<HeightmapPainter>().SetData(mesh, vertices);
+        }
     }
     private float GetNoiseSample(float x, float z)
     {

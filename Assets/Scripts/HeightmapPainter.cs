@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter))]
 public class HeightmapPainter : MonoBehaviour
 {
-    Mesh mesh;
-    Vector3[] vertices;
+    private Mesh mesh;
+    private Vector3[] vertices;
     Color[] colors;
     public Gradient gradient;
     public float minTerrainHeight = 0f;
@@ -21,9 +21,15 @@ public class HeightmapPainter : MonoBehaviour
 
     public void RefreshColors()
     {
+        GetMinMaxHeight();
         AssignColors();
     }
 
+    public void SetData(Mesh mesh, Vector3[] vertices)
+    {
+        this.mesh = mesh;
+        this.vertices = vertices;
+    }
 
     private void AssignColors()
     {
@@ -31,11 +37,25 @@ public class HeightmapPainter : MonoBehaviour
 
         for(int i = 0; i < vertices.Length; i++)
         {
+            Debug.Log(vertices[i].x+" "+vertices[i].y+" "+vertices[i].z);
             float height = Mathf.InverseLerp(minTerrainHeight, maxTerrainHeight, vertices[i].y);
+            Debug.Log(height);
             colors[i] = gradient.Evaluate(height);
         }
-
         mesh.colors = colors;
+    }
+
+    private void GetMinMaxHeight()
+    {
+        maxTerrainHeight = -100000f;
+        minTerrainHeight = 100000f;
+        for(int i = 0; i < vertices.Length; i++)
+        {
+            if(vertices[i].y > maxTerrainHeight)
+                maxTerrainHeight = vertices[i].y;
+            if(vertices[i].y < minTerrainHeight)
+                minTerrainHeight = vertices[i].y;
+        }
     }
 
     void OnGUI()
