@@ -35,3 +35,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Assets/Models/Combined.FBX
+Assets/Assets/Models/Combined.FBX.meta
+Assets/Assets/Models/kaunaspartly.FBX
+Assets/Assets/Models/kaunaspartly.FBX.meta

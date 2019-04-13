@@ -1,0 +1,172 @@
+fileFormatVersion: 2
+guid: e14eaf87ab73683468afe470a4d94491
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armor
+    100002: Camera
+    100004: GearWheels
+    100006: LightHook
+    100008: MachWheels
+    100010: MainGuns
+    100012: MainTank
+    100014: PropsRot
+    100016: Shield
+    100018: //RootNode
+    100020: TankRotation
+    100022: Wheels
+    400000: Armor
+    400002: Camera
+    400004: GearWheels
+    400006: LightHook
+    400008: MachWheels
+    400010: MainGuns
+    400012: MainTank
+    400014: PropsRot
+    400016: Shield
+    400018: //RootNode
+    400020: TankRotation
+    400022: Wheels
+    2000000: Camera
+    2100000: MainMetal_ROT
+    2100002: MainMetal_LH
+    2100004: MetalWheels_Gear
+    2100006: Screw_Gear
+    2100008: Rubber_W
+    2100010: Metal_Wheels
+    2100012: Rubber_Wheels
+    2100014: Screw_W
+    2100016: MainMetal_Props
+    2100018: Rubber_Props
+    2100020: Gun
+    2100022: DMainMetal_Props
+    2100024: Screw_Props
+    2100026: MachWheels
+    2100028: DMachWheels
+    2100030: MainMetal_Guns
+    2100032: DMainMetal_Guns
+    2100034: MainMetal_Armor
+    2100036: Screw_Shield
+    2100038: DMainMetal_Shield
+    2100040: MainMetal_Shield
+    2100042: Radiator
+    2100044: Screw
+    2100046: MainMetal
+    2100048: Light
+    2300000: Armor
+    2300002: GearWheels
+    2300004: LightHook
+    2300006: MachWheels
+    2300008: MainGuns
+    2300010: MainTank
+    2300012: PropsRot
+    2300014: Shield
+    2300016: TankRotation
+    2300018: Wheels
+    3300000: Armor
+    3300002: GearWheels
+    3300004: LightHook
+    3300006: MachWheels
+    3300008: MainGuns
+    3300010: MainTank
+    3300012: PropsRot
+    3300014: Shield
+    3300016: TankRotation
+    3300018: Wheels
+    4300000: TankRotation
+    4300002: LightHook
+    4300004: GearWheels
+    4300006: Wheels
+    4300008: PropsRot
+    4300010: MachWheels
+    4300012: MainGuns
+    4300014: Armor
+    4300016: Shield
+    4300018: MainTank
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
